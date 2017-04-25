@@ -1,10 +1,28 @@
 """
 Author: Thomas.JR
 THMS OPERATING SYSTEM
-version: pre-alpha v.0.0.001
+version: pre-alpha v.0.0.010
 """
 
 #program functions
+def help():
+  def git():
+     print("Welcome to System Helper. (VERSION: 0.00.1")
+     print("Use these commands to make guidelines:")
+     print("   /help.settings: To make guidelines for SETTINGS Program")
+   
+  def chekk():
+     hihelp = str(input(">>> "))
+	  if (hihelp == "/help.settings"):
+	    print("Awesome!")
+	    chekk()
+	  else:
+	    print("Invaild function!")
+	    chekk()
+     git()
+     chekk()  
+  
+  
 def iSolver():
   #variable
   hello = "\nHi! Welcome to iSolver!"
@@ -145,12 +163,18 @@ def mainIe():
      iSolver()
    elif (start == "shutdown"):
      shutDown()
+   elif (start == "/help"):
+     help()
    else:
      print("'%s' is not recognized as an internal or external command, operable program or batch file !" % (start))
      mainIe()
      
 def shutDown():
   print("Goodbye!")
+  
+
+  
+
    
 
 #user command input
